@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>燕山大学理学院--联系我</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!-- 导航 -->
+		<div class="header">
+			<div class="header-top">
+				<!-- logo -->
+				<div class="logo">
+					<h1>燕山大学理学院</h1>
+				</div>
+				<!-- 拥抱/物理 -->
+				<div class="res-box">
+					<a href="res.html">拥抱</a>
+					<span>|</span>
+					<a href="login.html">物理</a>
+				</div>
+			</div>
+			<!-- 菜单 -->
+			<div class="header-nav">
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">导师信息</a>
+					</li>
+					<li>
+						<a href="work.html">组内成员</a>
+					</li>
+					<li>
+						<a href="news.html">学术生活</a>
+					</li>
+					<li class="active">
+						<a href="contant.html">联系我</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 内页大图 -->
+		<div class="f-banner">
+			<img src="img/nbanner.jpg" alt="">
+		</div>
+		<div class="idea">
+			<form>
+				<label>
+					<input id="name" type="text" placeholder="请输入您的昵称">
+				</label>
+				<label>
+					<input id="phone" type="text" placeholder="请输入您的联系方式">
+				</label>
+				<label>
+					<textarea id="content" name="" id="" cols="30" rows="10" placeholder="这个页面暂时还不能用，输入什么都是没用的,等小师兄开发完再给意见吧.请输入您要反馈的意见/建议.请直接联系导师邮箱"></textarea>
+				</label>
+				<input type="submit" value="提交" onclick="tj()">
+			</form>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-nav">
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">导师信息</a>
+					</li>
+					<li>
+						<a href="work.html">组内成员</a>
+					</li>
+					<li>
+						<a href="news.html">学术生活</a>
+					</li>
+					<li>
+						<a href="contant.html">联系我</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-crt">
+				<p>© LinJiaQingRan 2023 组内网页</p>
+				<div>
+					<a href="res.html">迈向</a>
+					<span>|</span>
+					<a href="login.html">未来</a>
+					<span>|</span>
+					<a href="https://www.ysu.edu.cn/">燕山大学</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			function tj(){
+				// 获取姓名的值
+				var name = document.getElementById('name').value
+				// 获取手机号的值
+				var phone = document.getElementById('phone').value
+				// 获取内容的值
+				var content = document.getElementById('content').value
+				var regPhone = /^1[3456789]{1}\d{9}$/; //手机正则
+				// 姓名不能为空
+				if(!name) {
+					alert('姓名不能为空')
+					return false
+				}
+				// 手机不能为空
+				if(!phone) {
+					alert('手机不能为空')
+					return false
+				}
+				// 手机号码不正确
+				if(!regPhone.test(phone)){
+					alert('手机号码不正确')
+					return false
+				}
+				// 内容不能为空
+				if(!content) {
+					alert('内容不能为空')
+					return false
+				}
+				// 提交成功
+				alert('提交成功')
+				// 提交成功后跳转到首页
+				window.location.href = 'index.html'
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>燕山大学理学院--注册</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!-- 导航 -->
+		<div class="header">
+			<div class="header-top">
+				<!-- logo -->
+				<div class="logo">
+					<h1>燕山大学理学院</h1>
+				</div>
+				<!-- 拥抱/物理 -->
+				<div class="res-box">
+					<a href="res.html">拥抱</a>
+					<span>|</span>
+					<a href="login.html">物理</a>
+				</div>
+			</div>
+			<!-- 菜单 -->
+			<div class="header-nav">
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">导师信息</a>
+					</li>
+					<li>
+						<a href="work.html">组内成员</a>
+					</li>
+					<li>
+						<a href="news.html">学术生活</a>
+					</li>
+					<li class="active">
+						<a href="contant.html">联系我</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 注册框 -->
+		<div class="login">
+			<div class="login-f">
+				<h3>欢迎注册</h3>
+				<!-- 输入框 -->
+				<div class="login-box">
+					<input type="text" id="user" placeholder="请输入账号" />
+					<input type="password" id="password" placeholder="请输入密码" />
+				</div>
+				<button type="button" onclick="res()">注册</button>
+				<p>已有账号，<a href="login.html">点击登陆</a></p>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-nav">
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">导师信息</a>
+					</li>
+					<li>
+						<a href="work.html">组内成员</a>
+					</li>
+					<li>
+						<a href="news.html">学术生活</a>
+					</li>
+					<li class="active">
+						<a href="contant.html">联系我</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-crt">
+				<p>© LinJiaQingRan 2023 组内网页</p>
+				<div>
+					<a href="res.html">迈向</a>
+					<span>|</span>
+					<a href="login.html">未来</a>
+					<span>|</span>
+					<a href="https://www.ysu.edu.cn/">燕山大学</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			function res(){
+				var user = document.getElementById('user').value
+				var password = document.getElementById('password').value
+				
+				if(!user){
+					alert("账号不能为空")
+					return false
+				}
+				if(!password){
+					alert("密码不能为空")
+					return false
+				}
+				alert("嘻嘻，注册成功啦，赶紧去登录一下吧(¬‿¬)")
+				location.href = 'login.html'
+			}
+			</script>
+	</body>
+</html>
